@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: #285A48;
+  color: #B0E4CC;
   padding: 20px;
   white-space: nowrap;
 }
