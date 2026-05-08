@@ -6,6 +6,9 @@
 3. Show total
 4. show transaction list
 
-![alt text](image-2.png)
+Screenshot 1
+![SS1](image-2.png)
 
-![alt text](image-1.png)
+
+Screenshot 2
+![SS2](image-1.png)
