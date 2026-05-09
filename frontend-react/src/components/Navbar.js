@@ -1,7 +1,7 @@
 import React from 'react'
-import './Nav.css'
+import './Navbar.css'
 
-function Nav() {
+function Navbar() {
   return (
     <div className='navbar'>
         <h1>Expense Tracker App <i class="fa-solid fa-wallet"></i></h1>
@@ -10,4 +10,4 @@ function Nav() {
   )
 }
 
-export default Nav;
+export default Navbar;

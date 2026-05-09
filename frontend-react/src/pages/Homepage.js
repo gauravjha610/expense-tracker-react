@@ -1,9 +1,9 @@
 import React from 'react'
-import './Home.css'
+import './Homepage.css'
 
 import { useState } from 'react';
 
-function Home() {
+function Homepage() {
 
   const [inputNum, setInputNum] = useState("");
   const [inputNum2, setInputNum2] = useState("");
@@ -84,4 +84,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Homepage;
