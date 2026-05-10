@@ -6,7 +6,7 @@
   font-family: 'nunito', sans-serif;
 }
 body{
-  min-width: 350px;
+  min-width: 500px;
 }
 
 input[type=number]::-webkit-outer-spin-button,

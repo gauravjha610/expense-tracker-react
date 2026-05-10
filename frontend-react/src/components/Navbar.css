@@ -11,3 +11,7 @@
   padding: 20px;
   white-space: nowrap;
 }
+
+.navTitle, .navSubtitle{
+  padding: 0px 20px;
+}

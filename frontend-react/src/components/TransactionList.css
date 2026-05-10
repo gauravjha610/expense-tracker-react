@@ -38,16 +38,40 @@
     overflow-x: auto;
 }
 
-.transactionElement{
-    /* display: flex;
+/* .transactionElement{
+    display: flex;
     justify-content:space-between;
-    align-items: center; */
+    align-items: center;
+    font-size: 24px;
+    width: 100%;
+    gap: 20px;
     /* gap: 10px;
     /* width: 250px; */
     /* box-sizing: border-? */
-    font-size: 24px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 100%;
+    width: 100%; 
+*/
+
+.transactionHeader, .transactionRow{
+    display: grid;
+    grid-template-columns: 100px 150px 100px 50px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+
+}
+
+.transactionRow div{
+    overflow-wrap: break-word;
+}
+
+.deleteButton{
+    background-color: none;
+    width: fit-content;
+    border: none;
+    color: red;
 }

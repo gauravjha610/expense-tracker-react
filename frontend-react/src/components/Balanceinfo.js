@@ -9,7 +9,8 @@ function Balanceinfo({transactions}) {
 
   return (
     <div className='balanceinfo'>
-        <h2>Total net balance: <i class="fa-solid fa-indian-rupee-sign"></i> {Number.isInteger(netBalance)?netBalance:netBalance.toFixed(2)}</h2>
+        <h2>Total net balance:</h2>
+        <h2><i className="fa-solid fa-indian-rupee-sign"></i> {Number.isInteger(netBalance)?netBalance:netBalance.toFixed(2)}</h2>
     </div>
   )
 }

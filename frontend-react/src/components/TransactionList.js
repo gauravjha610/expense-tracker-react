@@ -11,12 +11,26 @@ function TransactionList({transactions}) {
 
         {showTransaction && (
         <div className='transactionList'>
-        {[...transactions].reverse().map((item, index) => (
-            <div key={index} className={`transactionElement ${item.type}`}>
-            <div>{item.type}</div>
-            <div>₹{item.amount}</div>
+          {transactions.length === 0? 
+              <div>No Transactions</div> :
+            <div>
+              <div className='transactionHeader'>
+                <div>Type</div>
+                <div>Description</div>
+                <div>Amount</div>
+                <div>Delete</div>
+              </div>
+              {
+              [...transactions].reverse().map((item, index) => (
+                <div key={index} className={`transactionRow ${item.type}`}>
+                <div>{item.type}</div>
+                <div>{item.desc}</div>
+                <div>₹{item.amount}</div>
+                <button className='deleteButton'><i class="fa-solid fa-trash"></i></button>
+                </div>
+              ))}
             </div>
-            ))}
+          }         
         </div>
         )}
     </div>

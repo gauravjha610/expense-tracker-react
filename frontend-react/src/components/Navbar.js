@@ -4,8 +4,8 @@ import './Navbar.css'
 function Navbar() {
   return (
     <div className='navbar'>
-        <h1>Expense Tracker App <i class="fa-solid fa-wallet"></i></h1>
-        <h4>--A simple solution to track your expenses--</h4>
+        <h1 className='navTitle'> Expense Tracker App <i className="fa-solid fa-wallet"></i> </h1>
+        <h4 className='navSubtitle'>--A simple solution to track your expenses--</h4>
     </div>
   )
 }

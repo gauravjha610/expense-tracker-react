@@ -8,17 +8,22 @@ import TransactionList from '../components/TransactionList';
 function Homepage() {
 
   const [inputNum, setInputNum] = useState("");
+  const [inputDesc, setInputDesc] = useState("");
+  const [inputDesc2, setInputDesc2] = useState("");
   const [inputNum2, setInputNum2] = useState("");
   const [transactions,setTransactions] = useState([]);
 
-  const addTransaction=(type,amount)=>{
+  const addTransaction=(type,desc,amount)=>{
     const newTransaction={
       type,
+      desc,
       amount : Number(amount)
     };
     setTransactions((prev)=>[...prev, newTransaction]);
     setInputNum("");
     setInputNum2("");
+    setInputDesc("");
+    setInputDesc2("");
   }
 
   return (
@@ -27,7 +32,13 @@ function Homepage() {
 
       <div className='editinfo'>
         <div className='box'>
-          <h2 className='title'>Income <i class="fa-solid fa-arrow-trend-up"></i></h2>
+          <h2 className='title'>Income <i className="fa-solid fa-arrow-trend-up"></i></h2>
+          <input className='inputbox'
+          type="text"
+          value={inputDesc}
+          onChange={(e) => setInputDesc(e.target.value)}
+          placeholder="Enter Description"
+          />
           <input className='inputbox'
           type="number"
           step="any"
@@ -35,11 +46,17 @@ function Homepage() {
           onChange={(e) => setInputNum(e.target.value)}
           placeholder="Enter amount"
           />
-          <button className='buttonIncome' onClick={()=>{addTransaction("Income",inputNum)}}>Add Income</button>
+          <button className='buttonIncome' onClick={()=>{addTransaction("Income",inputDesc,inputNum)}}>Add Income</button>
         </div>
 
         <div className='box'>
-          <h2 className='title'>Expenses <i class="fa-solid fa-arrow-trend-down"></i></h2>
+          <h2 className='title'>Expenses <i className="fa-solid fa-arrow-trend-down"></i></h2>
+          <input className='inputbox'
+          type="text"
+          value={inputDesc2}
+          onChange={(e) => setInputDesc2(e.target.value)}
+          placeholder="Enter Description"
+          />
           <input className='inputbox'
           type="number"
           step="any"
@@ -47,7 +64,7 @@ function Homepage() {
           onChange={(e) => setInputNum2(e.target.value)}
           placeholder="Enter amount"
           />
-          <button className='buttonExpense' onClick={()=>{addTransaction("Expense",inputNum2)}}>Add Expense</button>
+          <button className='buttonExpense' onClick={()=>{addTransaction("Expense",inputDesc2,inputNum2)}}>Add Expense</button>
         </div>
       </div>
 
