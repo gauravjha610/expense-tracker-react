@@ -13,8 +13,8 @@ function TransactionList({transactions}) {
         <div className='transactionList'>
         {[...transactions].reverse().map((item, index) => (
             <div key={index} className={`transactionElement ${item.type}`}>
-            <h2>{item.type}</h2>
-            <h2>₹{item.amount}</h2>
+            <div>{item.type}</div>
+            <div>₹{item.amount}</div>
             </div>
             ))}
         </div>
