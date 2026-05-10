@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./TransactionList.css";
 
-function TransactionList({ transactions, deleteTransaction }) {
+function TransactionList({ transactions, deleteTransaction, messageDelete }) {
   const [showTransaction, setShowTransaction] = useState(false);
 
   return (
@@ -29,6 +29,12 @@ function TransactionList({ transactions, deleteTransaction }) {
                 <div>Amount</div>
                 <div>Delete</div>
               </div>
+              
+              {messageDelete === ''?<></>:
+                <div className="deleteMessage">
+                  <p>{messageDelete}</p>
+                </div>}
+              
 
               <div className="transactionBody">
               {[...transactions].reverse().map((item) => (
