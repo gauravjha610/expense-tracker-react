@@ -24,6 +24,7 @@
     width: 300px;
     padding: 20px;
     margin: 20px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     background-color:  #B0E4CC;
@@ -43,7 +44,7 @@
 
 
 .title{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size:2rem;
     color: #091413;
 }

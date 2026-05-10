@@ -15,6 +15,8 @@ function Homepage() {
 
   const addTransaction=(type,desc,amount)=>{
     const newTransaction={
+      id: crypto.randomUUID(),
+      date: new Date().toLocaleString(),
       type,
       desc,
       amount : Number(amount)
