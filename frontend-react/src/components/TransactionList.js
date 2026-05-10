@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./TransactionList.css";
 
-function TransactionList({ transactions }) {
+function TransactionList({ transactions, deleteTransaction }) {
   const [showTransaction, setShowTransaction] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ function TransactionList({ transactions }) {
                   <div>{item.type}</div>
                   <div>{item.desc}</div>
                   <div>₹{item.amount}</div>
-                  <button className="deleteButton">
+                  <button className="deleteButton" onClick={() => deleteTransaction(item.id)}>
                     <i className="fa-solid fa-trash"></i>
                   </button>
                 </div>

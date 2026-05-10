@@ -1,7 +1,7 @@
 import React from 'react'
 import './Homepage.css'
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Balanceinfo from '../components/Balanceinfo';
 import TransactionList from '../components/TransactionList';
 
@@ -11,7 +11,15 @@ function Homepage() {
   const [inputDesc, setInputDesc] = useState("");
   const [inputDesc2, setInputDesc2] = useState("");
   const [inputNum2, setInputNum2] = useState("");
-  const [transactions,setTransactions] = useState([]);
+
+  const [transactions,setTransactions] = useState(()=>{
+    const savedTransactions = localStorage.getItem("myTransactions");
+    return savedTransactions? JSON.parse(savedTransactions):[] ;
+  });
+
+  useEffect(() => {
+  localStorage.setItem("myTransactions",JSON.stringify(transactions));
+}, [transactions]);
 
   const addTransaction=(type,desc,amount)=>{
     const newTransaction={
@@ -27,6 +35,13 @@ function Homepage() {
     setInputDesc("");
     setInputDesc2("");
   }
+
+  const deleteTransaction=(id)=>{
+    const updatedTransactions=transactions.filter((item)=> item.id !== id);
+
+    setTransactions(updatedTransactions);
+  }
+
 
   return (
     <div className='Homepage'>
@@ -71,7 +86,7 @@ function Homepage() {
       </div>
 
 
-      <TransactionList transactions={transactions}/>
+      <TransactionList transactions={transactions} deleteTransaction={deleteTransaction}/>
 
     </div>
   )
