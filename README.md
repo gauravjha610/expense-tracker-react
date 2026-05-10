@@ -34,31 +34,31 @@ Users can add income and expense transactions, track their balance, manage trans
 
 ### Home Page
 
-![alt text](Homepage1.png)
+![alt text](./images/Homepage1.png)
 
-![alt text](Homepage2.png)
+![alt text](./images/Homepage2.png)
 
 ### Transaction List
 
-![alt text](Transaction1.png)
+![alt text](./images/Transaction1.png)
 
-![alt text](Transaction2.png)
+![alt text](./images/Transaction2.png)
 
-![alt text](Transaction3.png)
+![alt text](./images/Transaction3.png)
 
 ### Validation & Success Messages
 
-![alt text](Successful1.png)
+![alt text](./images/Successful1.png)
 
-![alt text](Successful2.png)
+![alt text](./images/Successful2.png)
 
-![alt text](validation1.png)
+![alt text](./images/validation1.png)
 
-![alt text](validation2.png)
+![alt text](./images/validation2.png)
 
-![alt text](validation3.png)
+![alt text](./images/validation3.png)
 
-![alt text](validation4.png)
+![alt text](./images/validation4.png)
 
 ---
 
