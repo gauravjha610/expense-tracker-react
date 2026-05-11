@@ -64,7 +64,7 @@ Users can add income and expense transactions, track their balance, manage trans
 
 ## Live Demo
 
-Link : Coming soon.
+Link : [Live Netlify Link](https://expense-tracker-app123.netlify.app/)
 
 ---
 
