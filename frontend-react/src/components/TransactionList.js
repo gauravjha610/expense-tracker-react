@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./TransactionList.css";
+import "../styles/TransactionList.css";
 
 function TransactionList({ transactions, deleteTransaction, messageDelete }) {
   const [showTransaction, setShowTransaction] = useState(false);

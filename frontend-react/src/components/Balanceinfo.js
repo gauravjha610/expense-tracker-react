@@ -1,5 +1,5 @@
 import React from 'react'
-import './Balanceinfo.css'
+import '../styles/Balanceinfo.css'
 
 function Balanceinfo({transactions , message}) {
 
