@@ -34,31 +34,31 @@ Users can add income and expense transactions, track their balance, manage trans
 
 ### Home Page
 
-![alt text](./frontend-react/public/images/Homepage1.png)
+![alt text](./frontend/src/assets/screenshots/Homepage1.png)
 
-![alt text](./frontend-react/public/images/Homepage2.png)
+![alt text](./frontend/src/assets/screenshots/Homepage2.png)
 
 ### Transaction List
 
-![alt text](./frontend-react/public/images/Transaction1.png)
+![alt text](./frontend/src/assets/screenshots/Transaction1.png)
 
-![alt text](./frontend-react/public/images/Transaction2.png)
+![alt text](./frontend/src/assets/screenshots/Transaction2.png)
 
-![alt text](./frontend-react/public/images/Transaction3.png)
+![alt text](./frontend/src/assets/screenshots/Transaction3.png)
 
 ### Validation & Success Messages
 
-![alt text](./frontend-react/public/images/Successful1.png)
+![alt text](./frontend/src/assets/screenshots/Successful1.png)
 
-![alt text](./frontend-react/public/images/Successful2.png)
+![alt text](./frontend/src/assets/screenshots/Successful2.png)
 
-![alt text](./frontend-react/public/images/validation1.png)
+![alt text](./frontend/src/assets/screenshots/validation1.png)
 
-![alt text](./frontend-react/public/images/validation2.png)
+![alt text](./frontend/src/assets/screenshots/validation2.png)
 
-![alt text](./frontend-react/public/images/validation3.png)
+![alt text](./frontend/src/assets/screenshots/validation3.png)
 
-![alt text](./frontend-react/public/images/validation4.png)
+![alt text](./frontend/src/assets/screenshots/validation4.png)
 
 ---
 
