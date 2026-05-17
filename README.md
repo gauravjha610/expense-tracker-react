@@ -1,6 +1,6 @@
 # Expense Tracker App
 
-A responsive Expense Tracker web application built using React.
+A responsive Expense Tracker web application built using Mern Stack.
 Users can add income and expense transactions, track their balance, manage transaction history, and store data using local storage.
 
 ---
