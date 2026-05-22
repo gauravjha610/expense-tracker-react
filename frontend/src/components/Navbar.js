@@ -1,11 +1,26 @@
 import React from 'react'
 import '../styles/Navbar.css'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div className='navbar'>
-        <h1 className='navTitle'> Expense Tracker App <i className="fa-solid fa-wallet"></i> </h1>
-        <h4 className='navSubtitle'>--A simple solution to track your expenses--</h4>
+    <div className="navbar">
+
+      <div className="navLogo">
+        <Link to='/'>Expense Tracker <i className="fa-solid fa-wallet"></i></Link>
+      </div>
+
+      <div className="navLinks">
+        <Link>Home</Link>
+        <Link>Transactions</Link>
+      </div>
+
+      <div className="navProfile">
+        {/* <Link>$12345</Link> */}
+        <Link><i className="fa-solid fa-user"></i> Gaurav</Link>
+      </div>
+
+      
     </div>
   )
 }

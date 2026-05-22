@@ -1,0 +1,89 @@
+.signupBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #050a30;
+    color: #f4f6fc;
+    /* position: relative; */
+}
+
+.logo{
+    position: absolute;
+    /* width: 100%; */
+    justify-content: start;
+    align-items: start;
+    top: 20px;
+    left: 30px;
+    /* color: #f4f6fc; */
+}
+.logo a{
+    text-decoration: none;
+    color: #f4f6fc;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+.signupContainer{
+    width: 350px;
+    background-color: #083458;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    box-shadow: 4px 8px 30px rgba(240, 153, 77, 0.2);
+}
+.signupContainer a{
+    text-decoration: none;
+    color: #f0994d;
+}
+.signupContainer h1{
+    padding-bottom: 40px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #f4f6fc;
+    
+}
+.signupContainer h3{
+    font-size: 1rem;
+    font-weight: 400;
+    
+}
+.signupContainer input{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #f4f6fc;
+    font-size: 1rem;
+    font-weight: 350;
+    outline: none;
+}
+.signupContainer div{
+    width: 100%;
+}
+.errorInput input{
+    border: 2px solid #EF4444;
+}
+.errorInput p{
+    color: #EF4444;
+    font-size: 12px;
+}
+input:focus {
+  border: 2px solid #f0994d;
+}
+
+.signupContainer button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 350;
+    background-color: #f0994d;
+    color: #050a30;
+    cursor: pointer;
+}

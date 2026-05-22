@@ -1,0 +1,84 @@
+
+
+
+.cardBody{
+    width: 325px;
+    background-color: #083458;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    box-shadow: 4px 8px 30px rgba(240, 153, 77, 0.2);
+}
+.cardBody h1{
+    padding-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #f4f6fc;
+    
+}
+.cardBody input{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #f4f6fc;
+    font-size: 1rem;
+    font-weight: 350;
+    outline: none;
+    /* margin-top: 20px; */
+
+    /* position: relative; */
+}
+input:focus {
+  border: 2px solid #f0994d;
+}
+.buttonBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttonBox button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 350;
+    background-color: #f0994d;
+    color: #050a30;
+    cursor: pointer;
+}
+
+.inputBox{
+    width: 100%;
+}
+
+
+
+.successMessage{
+    color: #22C55E;
+    font-size: 12px;
+    font-weight: 500;
+}
+.errors{
+    color: #EF4444;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.errorInput input{
+    border: 2px solid #EF4444;
+}
+
+.errorMessage{
+    width: 100%;
+    color: #EF4444;
+    font-size: 12px;
+    font-weight: 500;
+
+}
