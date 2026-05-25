@@ -1,4 +1,4 @@
-import Homepage from './pages/HomePage.js';
+import Homepage from './pages/Homepage.js';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import LandingPage from './pages/LandingPage';
