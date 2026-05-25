@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/LandingPage.css'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 function LandingPage() {
   return (
-    <div className="landingBody">
-
-      <div className="logo">
-        <Link to="/">Expense Tracker <i className="fa-solid fa-wallet"></i></Link>
-      </div>
+    <div className="page">
+      <Navbar/>
+    <div className="landingBody content">
 
       <div className='LandingContent'>
         <h1>Manage your money</h1>
@@ -16,11 +16,13 @@ function LandingPage() {
         
         <div className='LandingButton'>
             <h3>Start Tracking</h3>
-            <Link to="/signup">Signup now</Link>
-            {/* <Link to="/login">Login</Link> */}
+            <Link to="/signup">Get started</Link>
         </div>
       </div>
 
+    </div>
+
+    <Footer/>
     </div>
   )
 }

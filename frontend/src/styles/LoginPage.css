@@ -6,23 +6,6 @@
     height: 100dvh;
     background-color: #050a30;
     color: #f4f6fc;
-    /* position: relative; */
-}
-
-.logo{
-    position: absolute;
-    /* width: 100%; */
-    justify-content: start;
-    align-items: start;
-    top: 20px;
-    left: 30px;
-    /* color: #f4f6fc; */
-}
-.logo a{
-    text-decoration: none;
-    color: #f4f6fc;
-    font-size: 1.6rem;
-    font-weight: 500;
 }
 
 
@@ -54,14 +37,28 @@
     font-weight: 400;
     
 }
+.loginContainer h3 a:hover{
+    color: #f4f6fc;
+    
+}
 .loginContainer input{
     width: 100%;
     padding: 10px 20px;
     border-radius: 10px;
-    border: 2px solid transparent;
+    border: 2px solid #f4f6fc;
     font-size: 1rem;
     font-weight: 350;
     outline: none;
+}
+.loginContainer div{
+    width: 100%;
+}
+.errorInput input{
+    border: 2px solid #EF4444;
+}
+.errorInput p{
+    color: #EF4444;
+    font-size: 12px;
 }
 input:focus {
   border: 2px solid #f0994d;
@@ -76,4 +73,7 @@ input:focus {
     background-color: #f0994d;
     color: #050a30;
     cursor: pointer;
+}
+.loginContainer button:hover{
+    color:#f4f6fc;
 }

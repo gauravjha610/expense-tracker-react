@@ -1,21 +1,19 @@
-import axios from 'axios'
-
-const API_URL = 'http://localhost:4000/api/transactions/'
+import api from "../api/axios";
 
 export const getTransactionsAPI= async()=>{
-    const response = await axios.get(API_URL);
+    const response = await api.get('/transactions');
 
     return response.data;
 }
 
 export const addTransactionAPI= async(TransactionData)=>{
-    const response = await axios.post(API_URL,TransactionData);
+    const response = await api.post('/transactions',TransactionData);
 
     return response.data;
 }
 
 export const deleteTransactionAPI = async(id)=>{
-    const response = await axios.delete(`${API_URL}/${id}`);
+    const response = await api.delete(`/transactions/${id}`);
 
     return response.data;
 }

@@ -1,29 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../styles/Homepage.css'
-import Balanceinfo from '../components/BalanceCard';
+import BalanceCard from '../components/BalanceCard';
 import Navbar from '../components/Navbar';
 import IncomeCard from '../components/IncomeCard';
 import ExpenseCard from '../components/ExpenseCard';
-import useTransaction from '../hooks/useTransaction';
+import TransactionContext from '../context/transactionContext';
+import Footer from '../components/Footer';
 
 function Homepage() {
-
-  const {transactions}=useTransaction();
+  const {transactions} = useContext(TransactionContext);
 
   return (
-    <div className='Homepage'>
+    <div className="page">
       <Navbar/>
-      <Balanceinfo transactions={transactions}/>
-
-      <div className='cardSection'>
-        <IncomeCard/>
-
-        <ExpenseCard/>
+      
+      <div className="Homepage content">
+        <BalanceCard transactions={transactions}/>
+        <div className='cardSection'>
+          <IncomeCard/>
+          <ExpenseCard/>
+        </div>
       </div>
 
 
-      {/* <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} messageDelete={messageDelete}/> */}
-
+    <Footer/>
     </div>
   )
 }

@@ -1,76 +1,60 @@
-import { useState } from 'react';
-import 
-{   getTransactionsAPI,
-    addTransactionAPI,
-    deleteTransactionAPI
-} from '../services/transactionServices.js'
+import { useContext } from 'react';
+import { addTransactionAPI,deleteTransactionAPI} from '../services/transactionServices.js'
+import { validateAmount, validateDescription } from '../utils/validators.js';
+import TransactionContext from '../context/transactionContext.js';
 
 const useTransaction= ()=>{
 
-    const [transactions,setTransactions]= useState([]);
+    const {transactions,getTransactions}= useContext(TransactionContext);
 
-    const getTransactions = async()=>{
-        try {
-            
-            const data =await getTransactionsAPI();
-            setTransactions(data);
 
-            return({
-                success: true
-            })
-
-        } catch (error) {
-            const message= error.response?.data?.message || "Something went wrong";
-            
+    const addTransaction=async({type,description,amount})=>{
+        const error = {
+            description:validateDescription(description) || "",
+            amount:validateAmount(amount) || ""
+        }
+        if(error.description || error.amount){
             return({
                 success:false,
-                message:message
-            })
+                error
+            });
         }
-    }
 
-    const addTransaction=async(transactionData)=>{
         try {
-            await addTransactionAPI(transactionData);
+            const newTransaction = {
+                type:type,
+                description:description,
+                amount:amount
+            }
+            const result = await addTransactionAPI(newTransaction);
             await getTransactions();
-
-            return({
-                success : true
-            })
+            return(result);
         
         } catch (error) {
-            const message= error.response?.data?.message || "Something went wrong";
-
             return({
-                success: false,
-                message:message
-            })
+                success:false,
+                apiError: error.response?.data?.message || "Something went wrong"
+            });
         }
 
     }
 
   const deleteTransaction=async(id)=>{
     try {
-        await deleteTransactionAPI(id);
-        getTransactions();
-
-        return({
-            success : true
-        });
+        const result = await deleteTransactionAPI(id);
+        await getTransactions();
+        return(result);
 
     } catch (error) {
-        const message= error.response?.data?.message || "Something went wrong";
-
-        return({
-            success: false,
-            message:message
-        })
-    }
+            return({
+                success:false,
+                apiError: error.response?.data?.message || "Something went wrong"
+            });
+        }
   }
 
   return(
     {
-        getTransactions,
         addTransaction,
         deleteTransaction,
         transactions

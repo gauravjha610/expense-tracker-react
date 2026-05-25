@@ -1,0 +1,74 @@
+.profilePage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #050a30;
+    display: flex;
+    flex-direction: column;
+
+}
+.profileContainer{
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.profileCard{
+    width: fit-content;
+    background-color: #083458;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #f4f6fc;
+    border-radius: 20px;
+}
+.profileDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #f4f6fc;
+}
+.profileDetails span{
+    color: #f0994d;
+}
+.profileImg i{
+    font-size: 5rem;
+    color: #f4f6fc;
+}
+.profileName{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.profileEmail{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.profilePageButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+.profileLogoutButton{
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 350;
+    background-color: #f0994d;
+    color: #050a30;
+    cursor: pointer;
+}
+.profileLogoutButton:hover{
+    color:#f4f6fc;
+}

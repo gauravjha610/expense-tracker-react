@@ -1,13 +1,10 @@
 .navbar{
-  position: relative;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
+  position: sticky;
+  top: 0;
+  z-index: 100;
   width: 100vw;
   height: 70px;
   background-color: #083458;
-  /* padding-top: 20px;
-  padding-left: 30px;  */
 }
 
 .navLogo{
@@ -24,7 +21,6 @@
 }
 
 .navLinks{
-  /* width: 100%; */
   position: absolute;
   top: 50%;
   transform: translate(-50%,-50%);
@@ -39,95 +35,68 @@
   font-size: 1rem;
   font-weight: 500;
 }
+.navLinks a:hover{
+  color: #f0994d;
+}
 
 .navProfile{
+  min-width: 150px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 30px;
 }
 
-.navProfile a{
-  text-decoration: none;
+.navProfile div{
   color: #f4f6fc;
   font-size: 1.2rem;
   font-weight: 500;
+  cursor: pointer;
 }
 .navProfile i{
   font-size: 1.2rem;
 }
 
-
-
-
-/* .navbar{
-  position: fixed; 
-  top: 0;
+.profileDropdownContainer{
+  
   width: 100%;
-  height: 64px;
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  padding: 25px 0px;
+  display: flex ;
+  flex-direction: column;
+  justify-content: end;
   align-items: center;
   background-color: #083458;
-  border-bottom: 2px solid #45F0F0;
-  color: white;
-  padding: 10px; 
-  padding-left: 20px;
-  padding-right: 20px;
-  white-space: nowrap; 
-  
+  border-radius: 10px;
+  display: none;
 }
-.navbar{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+.profileDropdownContainer a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f4f6fc;
 }
-
-.logo{
-    position: absolute;
-    justify-content: start;
-    align-items: start;
-    top: 20px;
-    left: 30px;
-}
-.logo a{
-    text-decoration: none;
-    color: #f4f6fc;
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-
-
-
-.navProfile{
+.profileDropdownItem{
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content:center;
+  /* padding-left: 10px; */
   gap: 10px;
-
-}
-
-.navProfile h1{
-  font-weight:300;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navProfile p{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: blueviolet;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: 400;
-  font-size: 1.5rem;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
 
   cursor: pointer;
-} */
+}
+.navProfile:hover .profileDropdownContainer{
+  display: flex;
+}
+.profileDropdownItem:hover{
+  color: #f0994d;
+}

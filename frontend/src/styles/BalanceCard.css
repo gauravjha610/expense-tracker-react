@@ -1,31 +1,59 @@
-.balanceCard{
-    /* width: 80vw;
+.balanceBody{
+    width: 100vw;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #f4f6fc;
-    color: #050a30;
-    padding: 30px 0px;
-    border-radius: 20px; */
-
-    /* position: absolute; */
-
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    position: fixed;
+    z-index: 50;
+}
+.balanceCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     padding: 10px 20px;
     width: 350px;
-    /* height: fit-content; */
     background-color: #083458;
     border-radius: 10px;
-    margin-top: 10px;
-
-    /* left: 100%; */
-    /* transform: translateX(-50%);  */
-    position: relative;
     border: 2px solid #f4f6fc;
+}
+.balanceContentBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    width: 300px;
+    padding: 10px 20px;
+}
+.balanceContent{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+}
+.balanceButtonBody{
+    width: 50px;
+    min-height:100%;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.dropdownButton{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    align-items: end;
+    color: #f4f6fc;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.dropdownButton i:hover{
+    color: #f0994d;
 }
 
 .balanceLogo{
@@ -45,7 +73,6 @@
     width: fit-content;
     font-size: 1rem;
     font-weight: 500;
-    /* background-color: #083458; */
     color: #f4f6fc;
 }
 .netBalance h2{
@@ -59,59 +86,5 @@
     font-size: 1.2rem;
 }
 
-.dropdownButton{
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    color: #f4f6fc;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-}
 
-.balanceDropdown{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 90%;
-    gap: 20px;
-    width:350px;
-    padding: 10px 20px;
-    /* background-color: brown; */
-    background-color: #083458;
-    /* border-radius: 10px; */
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 
-    border: 2px solid #f4f6fc;
-    border-top: none;
-
-    z-index: 0;
-}
-.dropdownItem{
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
-}
-
-.balanceContent{
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    justify-content: start;
-    align-items: center;
-}
-
-/* .balanceItem h2{
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-
-.balanceItem{
-    display: flex;
-    gap: 10px;
-} */

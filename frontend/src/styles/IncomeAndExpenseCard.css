@@ -28,9 +28,6 @@
     font-size: 1rem;
     font-weight: 350;
     outline: none;
-    /* margin-top: 20px; */
-
-    /* position: relative; */
 }
 input:focus {
   border: 2px solid #f0994d;
@@ -52,6 +49,9 @@ input:focus {
     background-color: #f0994d;
     color: #050a30;
     cursor: pointer;
+}
+.buttonBox button:hover{
+    color: #f4f6fc;
 }
 
 .inputBox{

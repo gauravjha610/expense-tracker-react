@@ -3,50 +3,46 @@ import { useState } from 'react';
 import useTransaction from '../hooks/useTransaction';
 import '../styles/IncomeAndExpenseCard.css'
 
-import {validateTransaction} from '../utils/validators.js'
-
 function ExpenseCard() {
 
     const {addTransaction} = useTransaction();
 
     const [amount,setAmount] = useState("");
     const [description,setDescription] = useState("");
-    const [errorMessage, setErrorMessage] = useState({});
-    const [apiErrorMessage, setApiErrorMessage] = useState("");
+    const [error,setError] = useState({description:"",amount:""});
+    const [apiError,setApiError]= useState("");
     const [successMessage,setSuccessMessage] = useState("");
+
+    const [loading,setLoading] =useState(false);
 
     const handleSubmit =async(e)=>{
         e.preventDefault();
-        setApiErrorMessage("");
+        setLoading(true);
         setSuccessMessage("");
-        setErrorMessage({});
-        
-        const validateErrors = validateTransaction({
-        description,
-        amount
-        });
+        setError({description:"",amount:""});
+        setApiError("");
+        const type='Expense';
+        const result =await addTransaction({type,description,amount});
 
-        if(Object.keys(validateErrors).length > 0){
-            setErrorMessage(validateErrors);
+        if(!result.success){
+            if(result.error){
+                setError(result.error);
+            }
+            if(result.apiError){
+                setApiError(result.apiError);
+            }
+            setLoading(false);
             return;
         }
-        setErrorMessage({});
 
-        const response = await addTransaction({
-            type:'Expense',
-            description,
-            amount
-        });
-
-        if(response.success){
-            setAmount("");
-            setDescription("");
-            setSuccessMessage("Expense Added Successfully");
-        }
-        else{
-            console.log("api error msg");
-            setApiErrorMessage(response.message);
-        }
+        //after success
+        setAmount("");
+        setDescription("");
+        setSuccessMessage("Expense Added Successfully");
+        setTimeout(() => {
+            setSuccessMessage("");
+        }, 3000);
+        setLoading(false);
 
     }
 
@@ -57,7 +53,7 @@ function ExpenseCard() {
             Expense <i className="fa-solid fa-arrow-trend-down"></i>
         </h1>
 
-        <div className={errorMessage.description? "inputBox errorInput":"inputBox"}>
+        <div className={error.description? "inputBox errorInput":"inputBox"}>
             <input
             type="text"
             value={description}
@@ -65,13 +61,13 @@ function ExpenseCard() {
             placeholder="Enter description"
             />
             {
-                errorMessage.description && (
-                    <div className='errorMessage'>{errorMessage.description}</div>
+                error.description && (
+                    <div className='errorMessage'>{error.description}*</div>
                 )
             }
         </div>
 
-        <div className={errorMessage.amount? "inputBox errorInput":"inputBox"}>
+        <div className={error.amount? "inputBox errorInput":"inputBox"}>
             <input
             type="number"
             step="any"
@@ -81,8 +77,8 @@ function ExpenseCard() {
             />
 
             {
-                errorMessage.amount && (
-                    <div className='errorMessage'>{errorMessage.amount}</div>
+                error.amount && (
+                    <div className='errorMessage'>{error.amount}*</div>
                 )
             }
 
@@ -92,11 +88,11 @@ function ExpenseCard() {
 
         {successMessage && <p className='successMessage'>{successMessage}</p>}
 
-        <button className='buttonIncome' type='submit'>
-            Add Expense
+        <button className='buttonIncome' type='submit' disabled={loading}>
+            {loading? "Loading...": "Add Expense"}
         </button>
 
-        {apiErrorMessage && <p className='errors'>{apiErrorMessage}</p>}
+        {apiError && <p className='errors'>{apiError}*</p>}
         </div>
     
     </form>

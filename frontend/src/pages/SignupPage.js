@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../styles/SignupPage.css'
 import { Link, useNavigate} from 'react-router-dom'
-import { signup } from '../hooks/useAuth';
+import useAuth from '../hooks/useAuth';
+import AuthContext from '../context/authContext';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function SignupPage() {
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+
+  const {signup} = useAuth();
+
+  const {setUser} = useContext(AuthContext);
 
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
@@ -14,13 +21,16 @@ function SignupPage() {
   const [error,setError] = useState({name:"",email:"",password:""});
   const [apiError,setApiError]= useState("");
 
-  const handleSignup = async(e) =>{
+  const [loading,setLoading] =useState(false);
 
+  const handleSignup = async(e) =>{
+    e.preventDefault();
+    setLoading(true);
     setError({name:"",email:"",password:""});
     setApiError("");
-
-    e.preventDefault();
     const result= await signup(name,email,password);
+    console.log(result);
+    console.log(result.user);
     if(!result.success){
       if(result.error){
         setError(result.error);
@@ -28,20 +38,20 @@ function SignupPage() {
       if(result.apiError){
         setApiError(result.apiError);
       }
-
+      setLoading(false);
       return;
     }
 
     //after Success
+    setUser(result.user);
+    setLoading(false);
     navigate('/home');
 
   }
   return (
-    <div className="signupBody">
-
-      <div className="logo">
-        <Link to='/'>Expense Tracker <i className="fa-solid fa-wallet"></i></Link>
-      </div>
+    <div className="page">
+    <Navbar/>
+    <div className="signupBody content">
 
       <form className='signupContainer' onSubmit={handleSignup}>
 
@@ -80,17 +90,22 @@ function SignupPage() {
         { error.password && <p>{error.password}*</p>}
         </div>
 
-        {apiError &&
+        {apiError && 
         <div className={apiError?"errorInput":""}>
            <p>{apiError}*</p>
         </div>
         }
-        <button type="submit">Sign up</button>
+        <button type="submit" disabled={loading}>
+          {loading? "Loading...": "Signup"}
+        </button>
         
         <h3>Already a user? <Link to="/login">Login</Link></h3>
 
       </form>
 
+    </div>
+
+    <Footer/>
     </div>
   )
 }
