@@ -23,13 +23,14 @@ app.use(cors({
     credentials:true
 }));
 
-app.use(cookieParser())
+app.use(cookieParser());
 
-app.use('/api/auth',authRoutes)
-app.use('/api/transactions/',transactionRoutes);
 app.get('/', (req, res) => {
   res.send('Backend running');
 });
+app.use('/api/auth',authRoutes)
+app.use('/api/transactions/',transactionRoutes);
+
 
 app.listen(
     process.env.PORT,()=>{
