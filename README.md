@@ -1,7 +1,7 @@
 # Expense Tracker App
 
 A responsive Expense Tracker web application built using Mern Stack.
-Users can add income and expense transactions, track their balance, manage transaction history, and store data using local storage.
+Users can add income and expense transactions, track their balance, manage transaction history, and store data using Mongo database storage.
 
 ---
 
@@ -18,6 +18,13 @@ Users can add income and expense transactions, track their balance, manage trans
 * Income & Expense Color Differentiation
 * Transaction Date Support
 * Responsive UI
+
+## Added Features In Phase 2(Backend)
+
+* Backend Integration
+* User Authentication
+* Database Storage
+
 
 ---
 
@@ -80,11 +87,8 @@ npm start
 
 ---
 
-## Future Improvements In Phase 2
+## Future Improvements In Version 2
 
-* Backend Integration
-* User Authentication
-* Database Storage
 * Expense Categories
 * Charts & Analytics
 * Monthly Reports
