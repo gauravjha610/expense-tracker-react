@@ -32,33 +32,17 @@ Users can add income and expense transactions, track their balance, manage trans
 
 ## Screenshots
 
-### Home Page
+![alt text](./frontend/src/assets/screenshots/ss1.png)
+![alt text](./frontend/src/assets/screenshots/ss2.png)
+![alt text](./frontend/src/assets/screenshots/ss3.png)
+![alt text](./frontend/src/assets/screenshots/ss4.png)
+![alt text](./frontend/src/assets/screenshots/ss5.png)
+![alt text](./frontend/src/assets/screenshots/ss6.png)
+![alt text](./frontend/src/assets/screenshots/ss7.png)
+![alt text](./frontend/src/assets/screenshots/ss8.png)
+![alt text](./frontend/src/assets/screenshots/ss9.png)
+![alt text](./frontend/src/assets/screenshots/ss10.png)
 
-![alt text](./frontend/src/assets/screenshots/Homepage1.png)
-
-![alt text](./frontend/src/assets/screenshots/Homepage2.png)
-
-### Transaction List
-
-![alt text](./frontend/src/assets/screenshots/Transaction1.png)
-
-![alt text](./frontend/src/assets/screenshots/Transaction2.png)
-
-![alt text](./frontend/src/assets/screenshots/Transaction3.png)
-
-### Validation & Success Messages
-
-![alt text](./frontend/src/assets/screenshots/Successful1.png)
-
-![alt text](./frontend/src/assets/screenshots/Successful2.png)
-
-![alt text](./frontend/src/assets/screenshots/validation1.png)
-
-![alt text](./frontend/src/assets/screenshots/validation2.png)
-
-![alt text](./frontend/src/assets/screenshots/validation3.png)
-
-![alt text](./frontend/src/assets/screenshots/validation4.png)
 
 ---
 
@@ -73,13 +57,13 @@ Link : [Live Netlify Link](https://expense-tracker-app123.netlify.app/)
 Clone the repository:
 
 ```bash
-git clone https://github.com/GauravJha610/expense-tracker-react.git
+git clone https://github.com/GauravJha610/expense-tracker-app-mern.git
 ```
 
 Go to project folder:
 
 ```bash
-cd frontend-react
+cd frontend
 ```
 
 Install dependencies:
